@@ -24,3 +24,21 @@ if uploaded_file is not None:
     # Can be used wherever a "file-like" object is accepted:
     dataframe = pd.read_csv(uploaded_file)
     st.write(dataframe)
+
+
+import streamlit as st
+
+genre = st.radio(
+    "What's your favorite movie genre",
+    [":rainbow[Comedy]", "***Drama***", "Documentary :movie_camera:"],
+    captions=[
+        "Laugh out loud.",
+        "Get the popcorn.",
+        "Never stop learning.",
+    ],
+)
+
+if genre == ":rainbow[Comedy]":
+    st.write("You selected comedy.")
+else:
+    st.write("You didn't select comedy.")
